@@ -12,7 +12,10 @@
     "@types/react-dom": "^18.0.6",
     "lucide-react": "^0.517.0",
     "react": "^18.2.0",
+    "react-accessible-accordion": "^5.0.1",
     "react-dom": "^18.2.0",
+    "react-icons": "^5.5.0",
+    "react-responsive-modal": "^7.0.0",
     "react-router-dom": "6.8.2",
     "react-scripts": "5.0.1",
     "typescript": "^4.8.2",
@@ -57,5 +60,6 @@
     "postcss": "^8.4.16",
     "prettier": "^3.0.0",
     "tailwindcss": "^3.1.8"
-  }
+  },
+  "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610"
 }

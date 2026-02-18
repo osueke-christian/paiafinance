@@ -23,28 +23,7 @@ code {
   text-align: left;
 }
 
-/* Custom scrollbar for code areas */
-textarea::-webkit-scrollbar,
-.overflow-y-auto::-webkit-scrollbar {
-  width: 8px;
-}
 
-textarea::-webkit-scrollbar-track,
-.overflow-y-auto::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 4px;
-}
-
-textarea::-webkit-scrollbar-thumb,
-.overflow-y-auto::-webkit-scrollbar-thumb {
-  background: #c1c1c1;
-  border-radius: 4px;
-}
-
-textarea::-webkit-scrollbar-thumb:hover,
-.overflow-y-auto::-webkit-scrollbar-thumb:hover {
-  background: #a8a8a8;
-}
 
 /* Animation for metric bars */
 @keyframes fillBar {
