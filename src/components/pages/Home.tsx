@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Footer from '../Footer'
+import { Helmet } from 'react-helmet-async';
 import "react-responsive-modal/styles.css";
 import { Modal } from 'react-responsive-modal'
 
@@ -164,6 +165,9 @@ function Home() {
 
     return (
         <>
+            <Helmet>
+                <link rel="canonical" href="https://www.paiafinance.com/" />
+            </Helmet>
             <style>{`
                 @keyframes fadeInUp {
                     from {

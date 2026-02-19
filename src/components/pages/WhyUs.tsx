@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react'
+import { Helmet } from 'react-helmet-async';
 import Footer from '../Footer'
 
 function WhyUs() {
@@ -57,6 +58,12 @@ function WhyUs() {
 
   return (
     <>
+      <Helmet>
+        <title>Why Paia Finance | Exclusive Comoros Forex &amp; Crypto License Distributor</title>
+        <meta name="description" content="Sole 2025 Comoros MoF mandate for Forex/Crypto licenses. AML/KYC standards, 6-wk fast-track, cost-efficient, global offices (Cyprus, SG, Dubai, HK, Sydney)" />
+        <meta name="keywords" content="Paia Finance why us, Comoros license distributor, exclusive distributor Comoros, Ministry of Finance Comoros mandate, Comoros forex license, Comoros crypto license, Comoros regulated hub 2025, AML KYC regulation 2025, fast track licensing 6 weeks, cost efficient compliance, favorable tax regime, forex brokerage license Comoros, crypto asset license Comoros, Paia Finance Cyprus Singapore Dubai Hong Kong Sydney" />
+        <link rel="canonical" href="https://www.paiafinance.com/why-us" />
+      </Helmet>
       <style>{`
         @keyframes fadeInUp {
           from {

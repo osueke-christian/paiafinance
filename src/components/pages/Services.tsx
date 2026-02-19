@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
+import { Helmet } from 'react-helmet-async';
 import Footer from '../Footer'
 import {
   Accordion,
@@ -188,6 +189,12 @@ function Services() {
 
   return (
     <>
+      <Helmet>
+        <title>Comoros Forex &amp; Crypto Licensing Services | Paia Finance</title>
+        <meta name="description" content="End-to-end Comoros Forex/Crypto licensing—KYC, due diligence, app prep, MoF filing, regulator follow-up. Flexible structures + fast-track option." />
+        <meta name="keywords" content="Comoros forex license, Comoros crypto license, forex licensing services, crypto licensing services, Union of Comoros license, Ministry of Finance Comoros filing, KYC due diligence, name check, application preparation, document review, regulator follow up, fast track licensing, corporate governance framework, compliance stack setup, banking and safeguarding, compliance monitoring systems, policy procedure manuals, risk management documentation, training and compliance" />
+        <link rel="canonical" href="https://www.paiafinance.com/services" />
+      </Helmet>
       <style>{`
         @keyframes fadeInUp {
           from {
