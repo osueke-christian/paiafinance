@@ -173,7 +173,7 @@ function PrivacyPolicy() {
             </p>
             
             <p className="text-lg mb-8">
-              Welcome to PAIA Finance ("we", "our", "us"). We value your privacy and are committed to protecting your personal data. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit and interact with our website at <a href="https://paiafinance.com" target="_blank" rel="noopener noreferrer">https://paiafinance.com</a>.
+              Welcome to PAIA Finance ("we", "our", "us"). We value your privacy and are committed to protecting your personal data. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit and interact with our website at <a href="https://www.paiafinance.com" target="_blank" rel="noopener noreferrer">https://www.paiafinance.com</a>.
             </p>
 
             <h2>1. Information We Collect</h2>
