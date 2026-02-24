@@ -1,43 +1,48 @@
 import React, { useEffect, useRef } from 'react'
 import Footer from '../Footer'
+import { Helmet } from 'react-helmet-async'
 
 
 function PrivacyPolicy() {
-    const heroContentRef = useRef<HTMLDivElement>(null)
-    const contentRef = useRef<HTMLDivElement>(null)
+  const heroContentRef = useRef<HTMLDivElement>(null)
+  const contentRef = useRef<HTMLDivElement>(null)
 
-    useEffect(() => {
-        const observerOptions = {
-          threshold: 0.1,
-          rootMargin: '0px 0px -50px 0px'
-        }
-    
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach((entry: IntersectionObserverEntry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('animate-fade-in-up')
-            }
-          })
-        }, observerOptions)
-    
-        if (contentRef.current) {
-          observer.observe(contentRef.current)
-        }
-    
-        if (heroContentRef.current) {
-            const heroElement = heroContentRef.current  // Capture the value
-            setTimeout(() => {
-              heroElement.classList.add('animate-fade-in-up')  // Use the captured value
-            }, 200)
-          }
-    
-        return () => observer.disconnect()
-      }, [])
+  useEffect(() => {
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    }
 
-       
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry: IntersectionObserverEntry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-fade-in-up')
+        }
+      })
+    }, observerOptions)
+
+    if (contentRef.current) {
+      observer.observe(contentRef.current)
+    }
+
+    if (heroContentRef.current) {
+      const heroElement = heroContentRef.current  // Capture the value
+      setTimeout(() => {
+        heroElement.classList.add('animate-fade-in-up')  // Use the captured value
+      }, 200)
+    }
+
+    return () => observer.disconnect()
+  }, [])
+
+
 
   return (
     <>
+      <Helmet>
+        <meta name="description" content="PaiaFinance is the exclusive distributor of Crypto and Forex licenses issued by the Ministry of Finance, Union of Comoros. Trusted regulatory, AML, KYC, and banking support for global financial institutions." />
+        <link rel="canonical" href="https://www.paiafinance.com/privacy-policy" />
+      </Helmet>
       <style>{`
         @keyframes fadeInUp {
           from {
@@ -127,8 +132,8 @@ function PrivacyPolicy() {
       <div className="h-[500px] relative overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 overflow-hidden">
-          <img 
-            src="/images/servicesBg.png" 
+          <img
+            src="/images/servicesBg.png"
             alt="Hero Background"
             className="absolute inset-0 w-full h-full object-cover"
           />
@@ -137,7 +142,7 @@ function PrivacyPolicy() {
         {/* Main Content */}
         <div className="relative z-10 pt-20 pb-10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div 
+            <div
               ref={heroContentRef}
               className="text-center pt-20 md:pt-32 initial-hidden"
             >
@@ -161,23 +166,23 @@ function PrivacyPolicy() {
       </div>
 
       {/* Privacy Policy Content */}
-      <div 
+      <div
         ref={contentRef}
         className="py-16 bg-white initial-hidden"
       >
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="privacy-content">
-            
+
             <p className="text-xl font-semibold text-[#25375B] mb-2">
               Effective Date: 15th August 2025
             </p>
-            
+
             <p className="text-lg mb-8">
               Welcome to PAIA Finance ("we", "our", "us"). We value your privacy and are committed to protecting your personal data. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit and interact with our website at <a href="https://www.paiafinance.com" target="_blank" rel="noopener noreferrer">https://www.paiafinance.com</a>.
             </p>
 
             <h2>1. Information We Collect</h2>
-            
+
             <h3>1.1 Personal Information You Provide</h3>
             <p>You may voluntarily provide us with personal information, including:</p>
             <ul>
@@ -263,9 +268,9 @@ function PrivacyPolicy() {
             <h2>11. Contact Us</h2>
             <p>If you have questions about this Policy, wish to exercise your rights, or file a complaint, please contact us:</p>
             <h3>PAIA Finance</h3>
-              <p><strong>Email:</strong> <a href="mailto:info@paiafinance.com">info@paiafinance.com</a></p>
-              <p><strong>Address:</strong> Meydan Grandstand, 6th floor, Meydan Road, Nad El Sheba Dubai United Arab Emirates</p>
-            
+            <p><strong>Email:</strong> <a href="mailto:info@paiafinance.com">info@paiafinance.com</a></p>
+            <p><strong>Address:</strong> Meydan Grandstand, 6th floor, Meydan Road, Nad El Sheba Dubai United Arab Emirates</p>
+
           </div>
         </div>
       </div>

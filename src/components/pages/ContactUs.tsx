@@ -1,8 +1,9 @@
 import React, { useEffect, useRef } from 'react'
 import Footer from '../Footer'
+import { Helmet } from 'react-helmet-async'
 
 function ContactUs() {
-  const heroContentRef:any = useRef(null)
+  const heroContentRef: any = useRef(null)
   const contactSectionRef = useRef(null)
 
   useEffect(() => {
@@ -12,21 +13,21 @@ function ContactUs() {
     }
 
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry:any) => {
+      entries.forEach((entry: any) => {
         if (entry.isIntersecting) {
           entry.target.classList.add('animate-fade-in-up')
-          
+
           // Special handling for contact section
           if (entry.target === contactSectionRef.current) {
             const cards = entry.target.querySelectorAll('.contact-card')
-            cards.forEach((card:any, index:any) => {
+            cards.forEach((card: any, index: any) => {
               setTimeout(() => {
                 card.classList.add('animate-scale-in')
               }, index * 150)
             })
 
             const officeLinks = entry.target.querySelectorAll('.office-link')
-            officeLinks.forEach((link:any, index:any) => {
+            officeLinks.forEach((link: any, index: any) => {
               setTimeout(() => {
                 link.classList.add('animate-bounce-in')
               }, 600 + (index * 100))
@@ -53,6 +54,10 @@ function ContactUs() {
 
   return (
     <>
+      <Helmet>
+        <meta name="description" content="PaiaFinance is the exclusive distributor of Crypto and Forex licenses issued by the Ministry of Finance, Union of Comoros. Trusted regulatory, AML, KYC, and banking support for global financial institutions." />
+        <link rel="canonical" href="https://www.paiafinance.com/contact-us" />
+      </Helmet>
       <style>{`
         @keyframes fadeInUp {
           from {
@@ -281,23 +286,23 @@ function ContactUs() {
 
       {/* Hero Section */}
       <div className="h-[600px] relative overflow-hidden"
-        >
+      >
 
 
-{/* Background Image */}
-<div className="absolute inset-0 overflow-hidden">
-                    <img 
-                        src="/images/servicesBg.png" 
-                        alt="Hero Background"
-                        className="absolute inset-0 w-full h-full object-cover"
-                    />
-                </div>
-       
+        {/* Background Image */}
+        <div className="absolute inset-0 overflow-hidden">
+          <img
+            src="/images/servicesBg.png"
+            alt="Hero Background"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+        </div>
+
 
         {/* Main Content */}
         <div className="relative z-10 pt-20 pb-10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div 
+            <div
               ref={heroContentRef}
               className="text-center pt-20 md:pt-32 initial-hidden"
             >
@@ -320,7 +325,7 @@ function ContactUs() {
       </div>
 
       {/* Contact Information Section */}
-      <section 
+      <section
         ref={contactSectionRef}
         className="py-20 initial-hidden"
       >

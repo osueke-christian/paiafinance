@@ -166,7 +166,8 @@ function Home() {
     return (
         <>
             <Helmet>
-                <link rel="canonical" href="https://www.paiafinance.com/" />
+                <meta name="description" content="PaiaFinance is the exclusive distributor of Crypto and Forex licenses issued by the Ministry of Finance, Union of Comoros. Trusted regulatory, AML, KYC, and banking support for global financial institutions." />
+                 <link rel="canonical" href="https://www.paiafinance.com/" />
             </Helmet>
             <style>{`
                 @keyframes fadeInUp {
@@ -394,7 +395,7 @@ function Home() {
                 </div>
             </div>
 
-            
+
             {/* Features Section */}
             <div
                 ref={featuresRef}
