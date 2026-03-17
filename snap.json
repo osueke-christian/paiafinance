@@ -1,0 +1,14 @@
+{
+  "source": "build",
+  "destination": "build",
+  "routes": [
+    "/",
+    "/services",
+    "/why-us",
+    "/contact-us",
+    "/privacy-policy"
+  ],
+  "timeout": 360000,
+  "waitFor": 5000,
+  "publicPath": "/"
+}
